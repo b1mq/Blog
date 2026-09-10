@@ -16,8 +16,8 @@ namespace Domain.Entities
         public string ThumbnailUrl { get; private set; } = string.Empty;
         public Roles Role { get;  private set; } = Roles.User;
         public Status Status { get; private set; } = Status.Pending;
-        private DateTime _createdAt;
-        private DateTime _lastActivity;
+        public DateTime CreatedAt { get; private set; }
+        public DateTime LastActivity { get; private set; }
         protected User() { }
         protected User(Guid id,string name,string email,string passwordHash,string country,string thumbnailUrl)
         {
@@ -27,8 +27,8 @@ namespace Domain.Entities
             PasswordHash = passwordHash;
             Country = country;
             ThumbnailUrl = thumbnailUrl;
-            _createdAt = DateTime.UtcNow;
-            _lastActivity = DateTime.UtcNow;
+            CreatedAt = DateTime.UtcNow;
+            LastActivity = DateTime.UtcNow;
         }
         public static  ResultGeneric<User>Create(string Name,string Email,string PasswordHash,string Country,string ThumbnailUrl)
         {
@@ -43,7 +43,7 @@ namespace Domain.Entities
             return ResultGeneric<User>.Succes(user);
 
         }
-        private void UpdateActivity() => _lastActivity = DateTime.UtcNow;
+        private void UpdateActivity() => LastActivity = DateTime.UtcNow;
 
         private Result IsValid(string value)
         {
