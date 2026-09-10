@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Application/Application.csproj" />
+  <Project Path="Blog-Backend/BlogUI.csproj" />
+  <Project Path="Domain/Domain.csproj" />
+  <Project Path="Interfaces/Interfaces.csproj" />
+</Solution>
