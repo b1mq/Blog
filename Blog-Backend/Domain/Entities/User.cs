@@ -43,7 +43,8 @@ namespace Domain.Entities
             return ResultGeneric<User>.Succes(user);
 
         }
-        private void UpdateActivity() => LastActivity = DateTime.UtcNow;
+        private void UpdateActivity() => LastActivity = DateTime.UtcNow; // я знаю что есть паттерн наблюдатель но мне лень это делать...
+        // плюс это не особо расширяемый crud проект
 
         private Result IsValid(string value)
         {
@@ -52,6 +53,17 @@ namespace Domain.Entities
             {
                 return Result.Failure("Value can not be empty");
             }
+            return Result.Succes();
+        }
+        public Result SetPasswordHash(string passwordHash)
+        {
+            var validationResult = IsValid(passwordHash);
+            if(!validationResult.isSucces)
+            {
+                return validationResult;
+            }
+            PasswordHash = passwordHash;
+            UpdateActivity();
             return Result.Succes();
         }
         public Result SetName(string value)

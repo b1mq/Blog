@@ -12,5 +12,6 @@ namespace Domain.Interfaces
         Task EditUserAsync(User user);
         Task RemoveUserAsync(User user);
         Task RemoveUserByIdAsync(Guid id);
+        Task SaveChangesAsync();
     }
 }

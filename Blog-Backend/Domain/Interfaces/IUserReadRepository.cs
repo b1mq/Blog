@@ -13,7 +13,8 @@ namespace Domain.Interfaces
         Task<IReadOnlyList<User>> GetCreatedUsersByTimeAsync(DateTime createdAt);
         Task<IReadOnlyList<User>> GetUsersByCountryAsync(string country);
         Task<IReadOnlyList<User>> GetUsersByRoleAsync(Roles role);
-
+        Task<User?> GetByNameAsync(string name);
+     
 
     }
 }
