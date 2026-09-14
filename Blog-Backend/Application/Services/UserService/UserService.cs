@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Application.Dtos.LoginDtos;
-using Application.Dtos.RegisterDto;
-using Application.Dtos.UpdateDtos;
-using Application.Dtos.ViewDtos;
+using Application.Dtos.UserDtos.LoginDtos;
+using Application.Dtos.UserDtos.RegisterDtos;
+using Application.Dtos.UserDtos.UpdateDtos;
+using Application.Dtos.UserDtos.ViewDtos;
 using Application.Interfaces.AuthInterfaces;
 using Application.Interfaces.HashServiceInterface;
 using Application.Interfaces.UserServicesInterface;

@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
-using Application.Dtos.LoginDtos;
-using Application.Dtos.RegisterDto;
-using Application.Dtos.UpdateDtos;
+using Application.Dtos.User.LoginDtos;
+using Application.Dtos.User.RegisterDtos;
+using Application.Dtos.User.UpdateDtos;
 using Application.Interfaces.UserServicesInterface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

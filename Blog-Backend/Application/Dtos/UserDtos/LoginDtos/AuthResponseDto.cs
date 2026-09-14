@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Application.Dtos.ViewDtos;
+using Application.DtosDtos.User.ViewDtos;
 
-namespace Application.Dtos.LoginDtos
+namespace Application.Dtos.UserDtos.LoginDtos
 {
     public sealed record AuthResponseDto(UserViewDto User, string Token);
 }

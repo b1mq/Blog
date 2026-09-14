@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Application.Dtos.LoginDtos;
+using Application.Dtos.User.LoginDtos;
 using FluentValidation;
 
 namespace Application.Validation.LoginDtosValidation

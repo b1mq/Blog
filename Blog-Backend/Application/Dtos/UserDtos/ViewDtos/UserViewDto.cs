@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Domain.Enums;
 using Domain.Entities;
-namespace Application.Dtos.ViewDtos
+namespace Application.Dtos.UserDtos.ViewDtos
 {
     public sealed record UserViewDto(Guid Id,string name, string email, string country, string avatarurl, Roles role, Status status) 
     {
