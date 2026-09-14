@@ -1,7 +1,8 @@
-using Infrastructure;
-
 using Application;
 using FluentValidation.AspNetCore;
+using Infrastructure;
+using Microsoft.OpenApi;
+using Blog_Backend.Extensions;
 namespace Blog_Backend
 {
     public class Program
@@ -12,8 +13,7 @@ namespace Blog_Backend
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
+            builder.Services.AddConfigurationSwagger();
             builder.Services.AddInfrastructure(builder.Configuration);
             builder.Services.AddApplicationLayer();
             builder.Services.AddFluentValidationAutoValidation();
