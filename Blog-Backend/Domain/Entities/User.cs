@@ -16,6 +16,7 @@ namespace Domain.Entities
         public string ThumbnailUrl { get; private set; } = string.Empty;
         public Roles Role { get;  private set; } = Roles.User;
         public Status Status { get; private set; } = Status.Pending;
+        public ICollection<Post> Posts { get; private set; } = new List<Post>();
         public DateTime CreatedAt { get; private set; }
         public DateTime LastActivity { get; private set; }
         protected User() { }

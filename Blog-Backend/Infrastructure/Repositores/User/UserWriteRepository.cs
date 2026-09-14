@@ -36,7 +36,12 @@ namespace Infrastructure.Repositores.Users
         }
         public  async Task RemoveUserByIdAsync(Guid id)
         {
-            await _db.Users.Where(x => x.Id == id).ExecuteDeleteAsync();
+            var ToDelete = await _db.Users.FirstOrDefaultAsync(u => u.Id == id);
+            if(ToDelete == null)
+            {
+                return;
+            }
+            _db.Users.Remove(ToDelete);
         }
         public async Task SaveChangesAsync() => await _db.SaveChangesAsync();
     }

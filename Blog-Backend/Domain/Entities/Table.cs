@@ -13,7 +13,9 @@ namespace Domain.Entities
         public string Title { get; private set; } = string.Empty;
         public string Content {  get; private set; } = string.Empty;
         public DateTime CreatedAt { get; private set; }
-        public DateTime? UpdatedAt { get; private set; }
+        public DateTime UpdatedAt { get; private set; }
+        public User User { get; private set; } = null!;
+        protected Post() { }
         private Post(Guid id,Guid userId,string title,string content)
         {
             Id = id;
@@ -22,6 +24,7 @@ namespace Domain.Entities
             Content = content;
             CreatedAt = DateTime.UtcNow;
             UpdatedAt = DateTime.UtcNow;
+            
          
 
         }
