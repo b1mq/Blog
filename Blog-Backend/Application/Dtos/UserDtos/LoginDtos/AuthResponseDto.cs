@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Application.DtosDtos.User.ViewDtos;
+using Application.Dtos.UserDtos.ViewDtos;
 
 namespace Application.Dtos.UserDtos.LoginDtos
 {

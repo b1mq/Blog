@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Application.Dtos.User.UpdateDtos;
+using Application.Dtos.UserDtos.UpdateDtos;
 using FluentValidation;
 
 namespace Application.Validation.UpdateDtosValidation
