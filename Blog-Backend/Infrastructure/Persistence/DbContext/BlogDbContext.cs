@@ -10,6 +10,7 @@ namespace Infrastructure.Persistence.DbContexts
     public class BlogDbContext : DbContext
     {
         public DbSet<User> Users => Set<User>();
+        public DbSet<Post> Posts => Set<Post>();
 
         public BlogDbContext(DbContextOptions<BlogDbContext> options) : base(options)
         {
